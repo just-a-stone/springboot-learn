@@ -12,7 +12,7 @@ import java.util.List;
  */
 public interface PersonRepository extends JpaRepository<Person, Long> {
 
-    @Query("select p from Person p where p.address = :address")
+    @Query("select p.name from Person p where p.address = :address")
     List<Person> findByAddress(@Param("address") String address);
 
     List<Person> findByNameAndAddress(String name, String address);
