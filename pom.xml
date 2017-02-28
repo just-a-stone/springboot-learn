@@ -20,6 +20,7 @@
 
     <modules>
         <module>web</module>
+        <module>dubbo-starter</module>
     </modules>
 
     <properties>
