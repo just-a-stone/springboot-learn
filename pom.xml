@@ -13,6 +13,7 @@
 
     <modules>
         <module>web</module>
+        <module>dubbo-starter</module>
         <module>database-multi</module>
     </modules>
 
@@ -22,11 +23,6 @@
         <version>1.4.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-
-    <modules>
-        <module>web</module>
-        <module>dubbo-starter</module>
-    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

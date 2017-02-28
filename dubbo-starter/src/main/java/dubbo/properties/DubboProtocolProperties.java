@@ -12,7 +12,7 @@ public class DubboProtocolProperties {
 
     private String name = "dubbo";
 
-    private String port = "20880";
+    private int port = 20880;
 
-    private boolean accessLog = true;
+    private String accessLog = "true";
 }

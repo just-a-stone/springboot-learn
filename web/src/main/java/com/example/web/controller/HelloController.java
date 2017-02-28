@@ -1,5 +1,7 @@
 package com.example.web.controller;
 
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.example.web.service.IProviderService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,22 +18,32 @@ import java.util.Map;
 @RequestMapping("hello")
 public class HelloController {
 
-    @ResponseBody
-    @RequestMapping("say")
-    public Object say() {
-        Map map = new HashMap();
-        map.put("aaa", "hello world!");
+	@Reference
+	private IProviderService providerService;
 
-        return map;
-    }
+	@ResponseBody
+	@RequestMapping("say")
+	public Object say() {
+		Map map = new HashMap();
+		map.put("aaa", "hello world!");
 
-    @RequestMapping("thy")
-    public String thy(Model model) {
-        Map map = new HashMap();
-        map.put("say", "hello world!");
+		return map;
+	}
 
-        model.addAttribute("person", map);
+	@RequestMapping("thy")
+	public String thy(Model model) {
+		Map map = new HashMap();
+		map.put("say", "hello world!");
 
-        return "index";
-    }
+		model.addAttribute("person", map);
+
+		return "index";
+	}
+
+	@ResponseBody
+	@RequestMapping("consume")
+	public Object consume() {
+
+		return providerService.hello();
+	}
 }

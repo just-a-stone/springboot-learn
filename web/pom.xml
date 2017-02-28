@@ -88,6 +88,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>spring-boot-dubbo-starter</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
