@@ -13,7 +13,7 @@
 
     <modules>
         <module>web</module>
-        <module>dubbo-starter</module>
+        <module>spring-boot-dubbo-starter</module>
         <module>database-multi</module>
     </modules>
 

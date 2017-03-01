@@ -91,6 +91,7 @@ public class DubboAutoConfiguration {
 		providerConfig.setApplication(applicationConfig);
 		providerConfig.setProtocol(protocolConfig);
 		providerConfig.setRegistry(registryConfig);
+		log.debug("[DubboAutoConfiguration] {}", providerConfig);
 		return providerConfig;
 	}
 }
